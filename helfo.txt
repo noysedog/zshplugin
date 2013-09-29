@@ -1,28 +1,27 @@
------------------------------------------
-	ALCUNE CONFIGURAZIONI
+## file di aiuto ##
 
-metasploit	> db_connect dbnoyse:${psw_omitted}@127.0.0.1:5432/metadog
-		> SSL port: 3790	
-		> Server Name: dogbox
-		> User: noyse
-		> Password: 
-postgresql	> utente: dbnoyse	psw:${psw_omitted} 	db: metadog
-openvas		> utente: admin		psw:${psw_omitted} 	http://localhost:9392/
-xplico		> utente: noyse		psw:${psw_omitted} 
+-----------------------------------------
+####### SCORCIATOIE TASTIERA #######
+File manager	<super> f
+Thunderbird	<super> m
+Firefox		<super> w
+Terminale	<super> t
+Gedit		<super> g
+Vlc		<super> v
 
 -----------------------------------------
 	ALIAS IN ZSH - NOYSE PLUGIN
 
 ############ NETWORKING STUFF ##################
 alias ping="ping -c 5"
-alias mywall="sudo ~/Bin/./net_tables.sh"
+alias mywall="sudo ~/.mybin/./net_tables.sh"
 alias net="sudo nano /etc/network/interfaces"
 alias net_lis="sudo netstat -plev"
 alias net_stat="sudo netstat -s"
 alias hola="nmap -sn" 
 alias pxc="proxychain"
 alias mon0="sudo airmon-ng start wlan0"
-alias setmon="sudo ~/Bin/./setmon.sh"
+alias setmon="sudo ~/.mybin/./setmon.sh"
 alias skype="LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so skype &"
 alias pubb="curl ifconfig.me"
 alias publ-v="curl ifconfig.me/all"	
@@ -31,12 +30,11 @@ alias tmh="ssh weveg@publ.ip.lol" #Take Me Home ;)
 #alias cert="openssl req -new -x509 -nodes -out cert.pem -keyout cert.key -days 365"
 
 
-
 #################### VARIE #######################
-alias -s {png,jpg,JPG,jpeg,PNG,gif,GIF}=xdg-open	
+alias -s {png,jpg,JPG,jpeg,PNG,gif,GIF}=feh	
 alias -s {txt,sh,php,py,pl,rb}=gedit	
 alias -s {mp3,ogg,flac,mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov}=vlc
-
+#----------------------------------------------
 alias crypt="sudo truecrypt"	#Run truecrypt
 alias estraigz="tar -zxvf"	#estract tar.gz
 alias estraibz="tar -jxvf"	#estract tar.bz2
@@ -45,6 +43,7 @@ alias scrot="scrot -c -d 5"
 alias cl="clear"		#clear console
 alias elimina="rm -rf"
 alias l+="ls */**"
+#----------------------------------------------
 alias -g nano='nano -q'
 alias -g N="2> /dev/null"
 alias -g G="|grep "
@@ -59,22 +58,19 @@ alias flux_start="nano .fluxbox/startup"
 alias flux_app="nano .fluxbox/apps"
 
 ################# CONFIGURAZIONI ZSH ##############
-alias helfo=`cat ~/Bin/helfo.txt | ccze -A`	#print this file plus other config
-alias helmod="nano ~/Bin/helfo.txt"	#edit my own help file
+alias helfo=`cat ~/.mybin/helfo.txt | ccze -A`	#print this file plus other config
+alias helmod="nano ~/.mybin/helfo.txt"	#edit my own help file
 alias zconoyse="nano ~/.oh-my-zsh/plugins/noyse/noyse.plugin.zsh" #edit plugin file
 alias zsource="source ~/.zshrc" 	#source zsh config file
 
-####################### ANON ######################
-alias anon="~/Bin/tor/./start &"
-
 ################## SEC TOOL ######################
-alias vega="sudo ~/Bin/vega/./Vega"
+alias vega="sudo ~/mybin/vega/./Vega"
 alias arpwner="sudo python ~/Bin/arpwner/main.py"
-alias strip="sudo ~/Bin/./autostrip.sh"
-alias karma="sudo ~/Bin/./karmaplay.sh"
-alias metpay="sudo ~/Bin/./MetPay.sh"
-alias gerix="sudo python ~/Bin/gerix-wifi-cracker-master/gerix.py"
-alias dnschef="sudo python ~/Bin/dnschef/./dnschef.py"
+alias strip="sudo ~/.mybin/./autostrip.sh"
+alias karma="sudo ~/.mybin/./karmaplay.sh"
+alias metpay="sudo ~/.mybin/./MetPay.sh"
+alias gerix="sudo python ~/.mybin/gerix-wifi-cracker-master/gerix.py"
+alias dnschef="sudo python ~/.mybin/dnschef/./dnschef.py"
 
 ##################### APT ########################
 alias agd="sudo apt-get update"
@@ -89,14 +85,13 @@ alias acs="sudo apt-cache search"
 alias repo="sudo nano /etc/apt/sources.list"
 alias instdeb="sudo dpkg -i"
 alias apti="sudo aptitude"
-----------------------------------------------
+#----------------------------------------------
 #SYSTEM#
-alias tool_upd="sudo backbox-update"	 
+alias tool_upd="sudo backbox-update minimal"	 
 alias log_kern="colortail /var/log/kern.log"	   
 alias log_sys="colortail /var/log/syslog"	 
 alias log_auth="colortail /var/log/auth.log"	 
 alias forum="firefox http://forum.backbox.org/ &"  
-alias crypt="sudo truecrypt"		 
 alias rw-='chmod 600'
 alias rwx='chmod 700'
 alias r--='chmod 644'
@@ -106,7 +101,7 @@ alias gpsea='gpg --search-keys'
 alias gplst='gpg --list-keys --with-fingerprint'
 alias gpsig='gpg --list-sigs'
 alias db='sudo /etc/init.d/postgresql start'
-
+#-----------------------------------------------
 alias msf='sudo msfconsole'
 alias sniff='sudo ettercap -G &'
 alias shark='sudo wireshark &'
