@@ -53,15 +53,18 @@ alias mywall='sudo ~/.mybin/./net_tables.sh'
 alias net='sudo nano /etc/network/interfaces'
 alias net_lis='sudo netstat -plev'
 alias net_stat='sudo netstat -s'
+alias tunap="sudo netstat -tunap"
+alias Listen="sudo lsof -i | grep LISTEN"
 alias hola='nmap -sn'
 alias pxc='proxychains'
 alias mon0='sudo airmon-ng start wlan0'
 alias setmon='sudo ~/.mybin/./setmon.sh'
 alias skype='LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so skype &'
-alias publ='curl ifconfig.me'
-alias publ-v='curl ifconfig.me/all'
-alias tmh='ssh weveg@pubb.ip.lol' #Take Me Home ;) 
-##Att!!##
+alias publ="curl http://ifconfig.me"
+alias publ-v="curl http://ifconfig.me/all"
+alias tmh="ssh noyse@xxxxxxxxxxxxxxxxx -p 2233" #Take Me Home ;) 
+alias tmh_LOC="ssh noyse@xxxxxxxxxxxxx -p 2233" #Take Me Home Local ;) 
+##Att!!## 
 #alias cert="openssl req -new -x509 -nodes -out cert.pem -keyout cert.key -days 365"
 
 
@@ -82,7 +85,7 @@ alias elimina='rm -rf'
 alias l+='ls */**'
 alias ls='ls --color=auto'
 #-------------------------------------------
-alias -g nano='nano -q'
+alias -g nano='nano'
 alias -g N='> /dev/null'
 alias -g G='| grep'
 alias -g C='| ccze -A'
@@ -94,6 +97,7 @@ alias duf='du -s *(/N) | sort -nr | cut -f 2- | while read a; do du -sh "$a"; do
 alias helfo='cat ~/.mybin/helfo.txt'	#print this file plus other config
 alias helmod='nano ~/.mybin/helfo.txt'	#edit my own help file
 alias zconoyse='nano ~/.oh-my-zsh/plugins/noyse/noyse.plugin.zsh' #edit this file
+alias zrcmod='nano .zshrc' #edit zshrc
 alias zsource='source ~/.zshrc' 	#source zsh config file
 
 #FLUXBOX#
@@ -103,14 +107,12 @@ alias flux_app='nano .fluxbox/apps'
 
 
 #SEC TOOL#
-alias vega='sudo ~/.mybin/vega/./Vega'
-alias arpwner='sudo python ~/.mybin/arpwner/./main.py'
 alias strip='sudo ~/.mybin/./autostrip.sh'
 alias karma='sudo ~/.mybin/./karmaplay.sh'
 alias metpay='sudo ~/.mybin/./MetPay.sh'
-alias w3af='sudo python ~/.mybin/w3af/w3af_gui'
 alias gerix='sudo python ~/.mybin/gerix-wifi-cracker-master/./gerix.py'
-alias dnschef='sudo python ~/.mybin/dnschef/./dnschef.py'
+alias rawr="sudo python ~/.mybin/rawr/./rawr.py"
+alias stf="sudo ~/.mybin/HconSTF/./HconSTF"
 
 #APT#
 alias agd='sudo apt-get update'
@@ -127,9 +129,9 @@ alias instdeb='sudo dpkg -i'
 
 #SYSTEM#
 alias tool_upd='sudo backbox-update minimal'	 
-alias log_kern='colortail -n 15  /var/log/kern.log'
-alias log_sys='colortail -n 15  /var/log/syslog'	 
-alias log_auth='colortail -n 15  /var/log/auth.log'	 
+alias log_kern='colortail -n 50  /var/log/kern.log'
+alias log_sys='colortail -n 50  /var/log/syslog'	 
+alias log_auth='colortail -n 50  /var/log/auth.log'	 
 alias forum='firefox http://forum.backbox.org/ &'  
 alias db='sudo /etc/init.d/postgresql start'
 #---------------------------------------	 
