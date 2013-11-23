@@ -18,6 +18,8 @@ alias mywall="sudo ~/.mybin/./net_tables.sh"
 alias net="sudo nano /etc/network/interfaces"
 alias net_lis="sudo netstat -plev"
 alias net_stat="sudo netstat -s"
+alias tunap="sudo netstat -tunap"
+alias Listen="sudo lsof -i | grep LISTEN"
 alias hola="nmap -sn" 
 alias pxc="proxychain"
 alias mon0="sudo airmon-ng start wlan0"
@@ -39,7 +41,7 @@ alias crypt="sudo truecrypt"	#Run truecrypt
 alias estraigz="tar -zxvf"	#estract tar.gz
 alias estraibz="tar -jxvf"	#estract tar.bz2
 alias pressa="tar -czf"		#build tar
-alias scrot="scrot -c -d 5"
+alias scroto="scrot -c -d 5"
 alias cl="clear"		#clear console
 alias elimina="rm -rf"
 alias l+="ls */**"
@@ -61,6 +63,7 @@ alias flux_app="nano .fluxbox/apps"
 alias helfo=`cat ~/.mybin/helfo.txt | ccze -A`	#print this file plus other config
 alias helmod="nano ~/.mybin/helfo.txt"	#edit my own help file
 alias zconoyse="nano ~/.oh-my-zsh/plugins/noyse/noyse.plugin.zsh" #edit plugin file
+alias zrcmod='nano .zshrc' #edit zshrc
 alias zsource="source ~/.zshrc" 	#source zsh config file
 
 ################## SEC TOOL ######################
@@ -71,6 +74,8 @@ alias karma="sudo ~/.mybin/./karmaplay.sh"
 alias metpay="sudo ~/.mybin/./MetPay.sh"
 alias gerix="sudo python ~/.mybin/gerix-wifi-cracker-master/gerix.py"
 alias dnschef="sudo python ~/.mybin/dnschef/./dnschef.py"
+alias rawr='python ~/.mybin/rawr/./rawr.py'
+alias stf="sudo  ~/.mybin/HconSTF/./HconSTF" #Pen-test browser 
 
 ##################### APT ########################
 alias agd="sudo apt-get update"
