@@ -47,13 +47,31 @@ function ripigliami()
 	echo "Non ti sei ancora ripigliato?"
 }
 
+#function rawr() {
+#	cd ~/.mybin/rawr
+#	sudo python ./rawr.py 
+#	echo -e  "\nDo u want see the map?"
+#	echo -e  "\nWhen rawr finish press y, else press any"
+#	read risp
+#	if [ $risp == y ]
+#		then
+#			for imm in $(ls log_*/maps/*.png) 
+#				do 
+#					xdg-open $imm 
+#				done
+#		else	
+#			echo " "
+#	fi
+#exit 0
+#}	
+
 #NETWORKING STUFF#
 alias ping='ping -c 5'
 alias mywall='sudo ~/.mybin/./net_tables.sh'
 alias net='sudo nano /etc/network/interfaces'
 alias net_lis='sudo netstat -plev'
 alias net_stat='sudo netstat -s'
-alias tunap="sudo netstat -tunap"
+alias putan="sudo netstat -putan"
 alias Listen="sudo lsof -i | grep LISTEN"
 alias hola='nmap -sn'
 alias pxc='proxychains'
@@ -62,8 +80,8 @@ alias setmon='sudo ~/.mybin/./setmon.sh'
 alias skype='LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so skype &'
 alias publ="curl http://ifconfig.me"
 alias publ-v="curl http://ifconfig.me/all"
-alias tmh="ssh noyse@xxxxxxxxxxxxxxxxx -p 2233" #Take Me Home ;) 
-alias tmh_LOC="ssh noyse@xxxxxxxxxxxxx -p 2233" #Take Me Home Local ;) 
+alias tmh="ssh noyse@noysexxxxxxxxxxx -p 2233" #Take Me Home ;) 
+alias tmh_LOC="ssh noyse@192.xxxxxxxx -p 2233" #Take Me Home Local ;) 
 ##Att!!## 
 #alias cert="openssl req -new -x509 -nodes -out cert.pem -keyout cert.key -days 365"
 
@@ -85,7 +103,7 @@ alias elimina='rm -rf'
 alias l+='ls */**'
 alias ls='ls --color=auto'
 #-------------------------------------------
-alias -g nano='nano'
+#alias -g nano='nano'
 alias -g N='> /dev/null'
 alias -g G='| grep'
 alias -g C='| ccze -A'
