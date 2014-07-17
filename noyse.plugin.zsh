@@ -38,7 +38,7 @@ function aspe()
 function ripigliami()
 {
 	#Quando sei perso, e non sai che fare
-	#questa funzione fa a caso tuo!!
+	#questa funzione fa al caso tuo!!
 	echo "Sei qui: $PWD"
 	echo "Sei tu: `whoami` "
 	echo "Con questo UID: $UID"
@@ -119,8 +119,8 @@ alias -s {ogg,flac,mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov}=vlc
 alias ora="date '+%X'"
 alias giorno="date '+%D'"
 alias crypt='sudo truecrypt'	#Run truecrypt
-alias estraigz='tar -zxvf'	#estract tar.gz
-alias estraibz='tar -jxvf'	#estract tar.bz2
+#alias estraigz='tar -zxvf'	#estract tar.gz sostituito dalla funzione
+#alias estraibz='tar -jxvf'	#estract tar.bz2 sostituito dalla funzione
 alias pressa='tar -cf'		#build tar
 alias scroto='scrot -c -d 5'
 alias cl='clear'		#clear console
@@ -177,6 +177,8 @@ alias log_sys='colortail -n 50  /var/log/syslog'
 alias log_auth='colortail -n 50  /var/log/auth.log'	 
 alias forum='firefox http://forum.backbox.org/ &'  
 alias db='sudo /etc/init.d/postgresql start'
+alias -g H=' --help'
+
 #---------------------------------------	 
 alias rw-='chmod 600'
 alias rwx='chmod 700'
@@ -190,6 +192,12 @@ alias gpsig='gpg --list-sigs'
 alias msf='sudo msfconsole'
 alias sniff='sudo ettercap -G &'
 alias shark='sudo wireshark &'
-alias anon='vidalia &'
+
+#ANONIMATO#
+alias vid='vidalia &'
+alias anonstart="cd ~/.mybin && sudo ./anonym.sh start"
+alias anonstop="cd ~/.mybin && sudo ./anonym.sh stop"
+alias jon="jondofox-start &"
+
 #-------------------------------------#
 ##################EOF##################
