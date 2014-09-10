@@ -1,5 +1,4 @@
 ## file di aiuto ##
-
 -----------------------------------------
 ####### SCORCIATOIE TASTIERA #######
 File manager	<super> f
@@ -8,7 +7,10 @@ Firefox		<super> w
 Terminale	<super> t
 Gedit		<super> g
 Vlc		<super> v
+Wiki Ricerca    <super+shift+w>
+Goog Ricerca    <super+shift+g>
 
+-----------------------------------------
 -----------------------------------------
 	ALIAS IN ZSH - NOYSE PLUGIN
 
@@ -18,16 +20,17 @@ alias mywall="sudo ~/.mybin/./net_tables.sh"
 alias net="sudo nano /etc/network/interfaces"
 alias net_lis="sudo netstat -plev"
 alias net_stat="sudo netstat -s"
-alias tunap="sudo netstat -tunap"
+alias putan="sudo netstat -tunap"
 alias Listen="sudo lsof -i | grep LISTEN"
 alias hola="nmap -sn" 
 alias pxc="proxychain"
 alias mon0="sudo airmon-ng start wlan0"
 alias setmon="sudo ~/.mybin/./setmon.sh"
 alias skype="LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so skype &"
-alias pubb="curl ifconfig.me"
+alias publ="curl ifconfig.me"
 alias publ-v="curl ifconfig.me/all"	
-alias tmh="ssh weveg@publ.ip.lol" #Take Me Home ;) 
+alias tmh="ssh noyse@...."
+alias tmh_LOC="ssh noyse@...."
 ##Att!!##
 #alias cert="openssl req -new -x509 -nodes -out cert.pem -keyout cert.key -days 365"
 
@@ -37,6 +40,8 @@ alias -s {png,jpg,JPG,jpeg,PNG,gif,GIF}=feh
 alias -s {txt,sh,php,py,pl,rb}=gedit	
 alias -s {mp3,ogg,flac,mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov}=vlc
 #----------------------------------------------
+alias ora="date '+%X'"
+alias giorno="date '+%D'"
 alias crypt="sudo truecrypt"	#Run truecrypt
 alias estraigz="tar -zxvf"	#estract tar.gz
 alias estraibz="tar -jxvf"	#estract tar.bz2
@@ -46,7 +51,7 @@ alias cl="clear"		#clear console
 alias elimina="rm -rf"
 alias l+="ls */**"
 #----------------------------------------------
-alias -g nano='nano -q'
+#alias -g nano='nano -q'
 alias -g N="2> /dev/null"
 alias -g G="|grep "
 alias -g C="| ccze -A"
@@ -60,11 +65,13 @@ alias flux_start="nano .fluxbox/startup"
 alias flux_app="nano .fluxbox/apps"
 
 ################# CONFIGURAZIONI ZSH ##############
-alias helfo=`cat ~/.mybin/helfo.txt | ccze -A`	#print this file plus other config
+alias helfo=`colortail ~/.mybin/helfo.txt`	#print this file plus other config
 alias helmod="nano ~/.mybin/helfo.txt"	#edit my own help file
 alias zconoyse="nano ~/.oh-my-zsh/plugins/noyse/noyse.plugin.zsh" #edit plugin file
 alias zrcmod='nano .zshrc' #edit zshrc
 alias zsource="source ~/.zshrc" 	#source zsh config file
+alias HH="cat ~/.mybin/HH.txt"		#Helperfile, piccole spiegazioni veloci di tool usati
+alias HHmod="nano ~/.mybin/HH.txt"	#Modifica l'helper 
 
 ################## SEC TOOL ######################
 alias vega="sudo ~/mybin/vega/./Vega"
@@ -96,7 +103,7 @@ alias tool_upd="sudo backbox-update minimal"
 alias log_kern="colortail /var/log/kern.log"	   
 alias log_sys="colortail /var/log/syslog"	 
 alias log_auth="colortail /var/log/auth.log"	 
-alias forum="firefox http://forum.backbox.org/ &"  
+alias multi_log='sudo multitail /var/log/kern.log /var/log/syslog /var/log/auth.log'
 alias rw-='chmod 600'
 alias rwx='chmod 700'
 alias r--='chmod 644'
@@ -106,8 +113,16 @@ alias gpsea='gpg --search-keys'
 alias gplst='gpg --list-keys --with-fingerprint'
 alias gpsig='gpg --list-sigs'
 alias db='sudo /etc/init.d/postgresql start'
+alias H='--help'
+alias New='sudo mount /dev/sda4 /mnt/contenitore'	#monta la partizione sda4
 #-----------------------------------------------
 alias msf='sudo msfconsole'
 alias sniff='sudo ettercap -G &'
 alias shark='sudo wireshark &'
-alias anon='vidalia &'
+
+#ANONIMATO#
+alias vid='vidalia &'
+alias anonstart="sudo ~/.mybin/./anonym.sh start"
+alias anonstop="sudo ~/.mybin/./anonym.sh stop"
+alias jon="jondofox-start &"
+

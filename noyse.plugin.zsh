@@ -38,7 +38,7 @@ function aspe()
 function ripigliami()
 {
 	#Quando sei perso, e non sai che fare
-	#questa funzione fa al caso tuo!!
+	#questa funzione fa a caso tuo!!
 	echo "Sei qui: $PWD"
 	echo "Sei tu: `whoami` "
 	echo "Con questo UID: $UID"
@@ -46,31 +46,6 @@ function ripigliami()
 	echo "Up: `uptime`"
 	echo "Non ti sei ancora ripigliato?"
 }
-
-# Estrazione archivi
-extract () {
-     if [ -f $1 ] ; then
-         case $1 in
-             *.tar.bz2)   tar xjf $1        ;;
-             *.tar.gz)    tar xzf $1     ;;
-             *.bz2)       bunzip2 $1       ;;
-             *.rar)       rar x $1     ;;
-             *.gz)        gunzip $1     ;;
-             *.tar)       tar xf $1        ;;
-             *.tbz2)      tar xjf $1      ;;
-             *.tgz)       tar xzf $1       ;;
-             *.zip)       unzip $1     ;;
-             *.Z)         uncompress $1  ;;
-             *.7z)        7z x $1    ;;
-             *)           echo "'$1' non può essere estratto con extract()" ;;
-         esac
-     else
-         echo "'$1' file non valido"
-     fi
-}
-
-
-
 
 #function rawr() {
 #	cd ~/.mybin/rawr
@@ -105,8 +80,8 @@ alias setmon='sudo ~/.mybin/./setmon.sh'
 alias skype='LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so skype &'
 alias publ="curl http://ifconfig.me"
 alias publ-v="curl http://ifconfig.me/all"
-alias tmh="ssh noyse@noysexxxxxxxxxxx -p 2233" #Take Me Home ;) 
-alias tmh_LOC="ssh noyse@192.xxxxxxxx -p 2233" #Take Me Home Local ;) 
+alias tmh="ssh noyse@...."
+alias tmh_LOC="ssh noyse@...."
 ##Att!!## 
 #alias cert="openssl req -new -x509 -nodes -out cert.pem -keyout cert.key -days 365"
 
@@ -119,8 +94,8 @@ alias -s {ogg,flac,mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov}=vlc
 alias ora="date '+%X'"
 alias giorno="date '+%D'"
 alias crypt='sudo truecrypt'	#Run truecrypt
-#alias estraigz='tar -zxvf'	#estract tar.gz sostituito dalla funzione
-#alias estraibz='tar -jxvf'	#estract tar.bz2 sostituito dalla funzione
+alias estraigz='tar -zxvf'	#estract tar.gz
+alias estraibz='tar -jxvf'	#estract tar.bz2
 alias pressa='tar -cf'		#build tar
 alias scroto='scrot -c -d 5'
 alias cl='clear'		#clear console
@@ -140,8 +115,10 @@ alias duf='du -s *(/N) | sort -nr | cut -f 2- | while read a; do du -sh "$a"; do
 alias helfo='cat ~/.mybin/helfo.txt'	#print this file plus other config
 alias helmod='nano ~/.mybin/helfo.txt'	#edit my own help file
 alias zconoyse='nano ~/.oh-my-zsh/plugins/noyse/noyse.plugin.zsh' #edit this file
-alias zrcmod='nano .zshrc' #edit zshrc
+alias zrcmod='nano ~/.zshrc' #edit zshrc
 alias zsource='source ~/.zshrc' 	#source zsh config file
+alias HH="cat ~/.mybin/HH.txt"          #Helperfile, piccole spiegazioni veloci di tool usati
+alias HHmod="nano ~/.mybin/HH.txt"      #Modifica l'helper 
 
 #FLUXBOX#
 alias flux_menu='nano .fluxbox/fluxbox-menu' 
@@ -171,14 +148,16 @@ alias repo='sudo nano /etc/apt/sources.list'
 alias instdeb='sudo dpkg -i'
 
 #SYSTEM#
-alias tool_upd='sudo backbox-update minimal'	 
-alias log_kern='colortail -n 50  /var/log/kern.log'
-alias log_sys='colortail -n 50  /var/log/syslog'	 
-alias log_auth='colortail -n 50  /var/log/auth.log'	 
-alias forum='firefox http://forum.backbox.org/ &'  
+#alias tool_upd='sudo backbox-update minimal'	 
+alias log_kern='sudo colortail -n 50  /var/log/kern.log'
+alias log_sys='sudo colortail -n 50  /var/log/syslog'	 
+alias log_auth='sudo colortail -n 50  /var/log/auth.log'
+alias multi_log='sudo multitail /var/log/kern.log /var/log/syslog /var/log/auth.log'
 alias db='sudo /etc/init.d/postgresql start'
 alias -g H=' --help'
-
+alias Rb="sudo reboot"
+alias Po="sudo poweroff"
+alias New='sudo mount /dev/sda4 /mnt/contenitore'
 #---------------------------------------	 
 alias rw-='chmod 600'
 alias rwx='chmod 700'
@@ -196,7 +175,7 @@ alias shark='sudo wireshark &'
 #ANONIMATO#
 alias vid='vidalia &'
 alias anonstart="cd ~/.mybin && sudo ./anonym.sh start"
-alias anonstop="cd ~/.mybin && sudo ./anonym.sh stop"
+alias anonstop="cd ~/.mybin && sudo ./anonym.sh stop" 
 alias jon="jondofox-start &"
 
 #-------------------------------------#
