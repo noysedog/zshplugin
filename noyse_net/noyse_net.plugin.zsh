@@ -1,31 +1,36 @@
-#NETWORKING STUFF#
-alias ping='ping -c 5'
-alias mywall='sudo ~/.mybin/./net_tables.sh'
-alias net='sudo nano /etc/network/interfaces'
-alias net_lis='sudo netstat -plev'
-alias net_stat='sudo netstat -s'
-alias putan="sudo netstat -putan"
-alias Listen="sudo lsof -i | grep LISTEN"
-alias hola='nmap -sn'
-alias pxc='proxychains'
-alias mon0='sudo airmon-ng start wlan0'
-alias setmon='sudo ~/.mybin/./setmon.sh'
-alias skype='LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so skype &'
-alias publ="curl http://ifconfig.me"
-alias publ-v="curl http://ifconfig.me/all"
-alias Tmhoney="ssh honey@n0ys3.servebeer.com -p 2233" #Take Me Home ;)
-alias Tmh="ssh noyse@n0ys3.servebeer.com -p 2233" #Take Me Home ;) 
-alias RAStmh="ssh noyse@192.168.0.10 -p2233" #Take Me Home Local ;) 
-alias DEStmh="ssh noyse@192.168.0.233 -p2233"
-alias -g relan="noyse@192.168.0.233"
+#versione:      2.0.1.7
+#data.Agg:      14/03/19
 
-##Att!!## 
-#alias cert="openssl req -new -x509 -nodes -out cert.pem -keyout cert.key -days 365"
-#-------------------------------------#
-#ANONIMATO#
+#--NETWORKING STUFF----------------------#
+alias ping='ping -c 5'
+alias pongle='ping -c 3 8.8.8.8'
+alias net='nano /etc/network/interfaces'
+alias net_lis='_ netstat -plev'
+alias net_stat='_ netstat -s'
+alias putan="_ netstat -putan"
+alias Listen="_ lsof -i | grep LISTEN"
+alias -g  pxc='proxychains'
+alias publ="curl icanhazip.com"
+#alias publ-v="curl http://ifconfig.me/all"
+
+#--SSH----------------------------------# Only Public key
+alias RAS='ssh noyse@192.168.178.22 -p2233'
+alias MINIDOG='ssh noyse@192.168.178.30'
+alias LAPDOG='ssh noyse@192.168.178.21'
+
+
+#--SCRIPT-------------------------------#
+alias mywall='~/.mybin/./net_tables.sh'
+alias hola='~/.mybin/./hola.sh'
+
+#SOCAT#
+alias soc="socat TCP4-LISTEN:4444 STDOUT"
+
+#--ANONIMATO----------------------------#
 alias vid='vidalia &'
-alias anonstart="cd ~/.mybin && sudo ./anonym.sh start"
-alias anonstop="cd ~/.mybin && sudo ./anonym.sh stop" 
-alias jon="jondofox-start &"
+#alias anonstart="cd ~/.mybin && ./anonym.sh start"
+#alias anonstop="cd ~/.mybin &&  ./anonym.sh stop"
+alias -g VPN="openvpn --config"
+alias xanax="openvpn --config ~/.mybin/xanax.ovpn && sleep 5 && mv /etc/resolv.conf /etc/resolv.conf.bk && cp ~/.mybin/res.conf /etc/resolv.conf"
 #-------------------------------------#
 ##################EOF##################
